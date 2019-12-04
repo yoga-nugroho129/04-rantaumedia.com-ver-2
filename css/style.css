@@ -270,8 +270,8 @@ body {
 .about-item-box {
     border-radius: 10px;
     padding: 25px;
-    height: 18.3em;
-    margin: 10px 5px;
+    height: 17em;
+    margin: 5px 5px;
     transition: all 0.3s ease-in;
 }
 
@@ -515,6 +515,15 @@ footer p {
     margin-bottom: 0 !important;
     padding-top: 15px !important;
     padding-bottom: 15px !important;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #898989;
 }
 
 /*END OF FOOTER*/

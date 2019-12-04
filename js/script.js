@@ -14,7 +14,8 @@ $(document).ready(function() {
             $('#red-text').addClass('media-text');
         }
 
-        console.log(scrollValue);
+        // console.log(scrollValue);
+
         //END OF SCROLLED NAVBAR //
         // ============================================= //
 
@@ -78,28 +79,34 @@ $(document).ready(function() {
             }
         }]
     });
-    // ENF OF PORTFOLIO CAROUSEL //
+    // END OF PORTFOLIO CAROUSEL //
     // ============================================= //
 
     // SMOOTH SCROLL //
-    $('.page-scroll').on('click', function(e) {
-        var hrefTarget = $(this).attr('href');
-        var sectionTarget = $(hrefTarget);
+    // $('.page-scroll').on('click', function(e) {
+    //     var hrefTarget = $(this).attr('href');
+    //     var sectionTarget = $(hrefTarget);
 
-        // $('body').animate({
-        //     scrollTop: sectionTarget.offset().top - 50
-        // }, 1000, 'swing');
+    //     // $('body').animate({
+    //     //     scrollTop: sectionTarget.offset().top - 50
+    //     // }, 1000, 'swing');
 
+    //     e.preventDefault();
+    // });
+
+    $(".page-scroll").click(function(e) {
         e.preventDefault();
-    });
-
-    $('.about-click').click(function(e) {
-        // var hrefTarget = $(this).attr('href');
+        var hrefTarget = $($(this).attr('href')).offset().top - 50;
         // var sectionTarget = $(hrefTarget);
-        $('body').animate({
-            scrollTop: $('#body').offset()
-        }, 1000);
-        e.preventDefault();
+        // $('body').animate({
+        //     scrollTop: $('#about').offset()
+        // }, 1000);
+        // var scrollPosition = hrefTarget.scrollTop();
+        $('body, html').animate({
+            scrollTop: hrefTarget
+        }, 1250, 'swing')
+
+        console.log(hrefTarget);
     });
 
 });
