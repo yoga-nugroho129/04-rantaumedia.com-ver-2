@@ -13,35 +13,37 @@ $(document).ready(function() {
             $('#home-nav-scroll').removeClass('scrolled-nav');
             $('#red-text').addClass('media-text');
         }
+
+        console.log(scrollValue);
         //END OF SCROLLED NAVBAR //
         // ============================================= //
 
         // NAVBAR ACTIVE SECTION //
-        if (scrollValue < 280) {
+        if (scrollValue < 250) {
             $('#home-pos').addClass('nav-link-active');
             $('#portfolio-pos').removeClass('nav-link-active');
             $('#about-pos').removeClass('nav-link-active');
             $('#process-pos').removeClass('nav-link-active');
             $('#contact-pos').removeClass('nav-link-active');
-        } else if (scrollValue > 300 && scrollValue < 540) {
-            $('#portfolio-pos').addClass('nav-link-active');
-            $('#home-pos').removeClass('nav-link-active');
-            $('#about-pos').removeClass('nav-link-active');
-            $('#process-pos').removeClass('nav-link-active');
-            $('#contact-pos').removeClass('nav-link-active');
-        } else if (scrollValue > 540 && scrollValue < 1345) {
+        } else if (scrollValue > 250 && scrollValue < 1250) {
             $('#about-pos').addClass('nav-link-active');
             $('#home-pos').removeClass('nav-link-active');
             $('#portfolio-pos').removeClass('nav-link-active');
             $('#process-pos').removeClass('nav-link-active');
             $('#contact-pos').removeClass('nav-link-active');
-        } else if (scrollValue > 1600 && scrollValue < 2010) {
+        } else if (scrollValue > 1250 && scrollValue < 1775) {
             $('#process-pos').addClass('nav-link-active');
             $('#home-pos').removeClass('nav-link-active');
             $('#portfolio-pos').removeClass('nav-link-active');
             $('#about-pos').removeClass('nav-link-active');
             $('#contact-pos').removeClass('nav-link-active');
-        } else if (scrollValue > 2190) {
+        } else if (scrollValue > 1775 && scrollValue < 2100) {
+            $('#portfolio-pos').addClass('nav-link-active');
+            $('#home-pos').removeClass('nav-link-active');
+            $('#about-pos').removeClass('nav-link-active');
+            $('#process-pos').removeClass('nav-link-active');
+            $('#contact-pos').removeClass('nav-link-active');
+        } else if (scrollValue > 2100) {
             $('#contact-pos').addClass('nav-link-active');
             $('#home-pos').removeClass('nav-link-active');
             $('#portfolio-pos').removeClass('nav-link-active');
