@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 body {
     font-family: 'Montserrat' !important;
 }
@@ -6,6 +8,8 @@ body {
 .navbar {
     padding-top: 25px !important;
     padding-bottom: 25px !important;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -41,6 +45,8 @@ body {
     position: relative;
     left: -10px;
     opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -49,6 +55,8 @@ body {
     position: relative;
     left: 10px;
     opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -61,6 +69,8 @@ body {
 .nav-link-active {
     font-weight: 600;
     border-bottom: 3px solid #ff5050;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -88,7 +98,9 @@ body {
     padding-top: 120px !important;
     width: auto;
     height: 90%;
-    /*change image background using url*/
+    /*======CHANGE BANNER BACKGROUND COLOR & IMAGE USING URL======*/
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(138, 0, 0, 1)), to(rgba(201, 7, 7, 0.8))), url('../img/banner/banner.jpg') !important;
+    background-image: -o-linear-gradient(bottom, rgba(138, 0, 0, 1) 0%, rgba(201, 7, 7, 0.8) 100%), url('../img/banner/banner.jpg') !important;
     background-image: linear-gradient(0deg, rgba(138, 0, 0, 1) 0%, rgba(201, 7, 7, 0.8) 100%), url('../img/banner/banner.jpg') !important;
     background-position: center;
     background-size: cover;
@@ -114,11 +126,14 @@ body {
     font-size: 1.2em;
 }
 
+/*SEETING STYLE OF ALL BUTTON*/
 .cta-btn {
     background: #6F0000 !important;
     color: white !important;
     border-radius: 10px;
     border: 1.5px salmon solid !important;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
     -webkit-box-shadow: -2px 0px 10px rgba(220, 22, 22, 1);
     box-shadow: -2px 0px 10px rgba(220, 22, 22, 1);
@@ -153,6 +168,7 @@ body {
 .slick-slider {
     position: relative;
     display: block;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -185,9 +201,7 @@ body {
 .slick-slider .slick-track,
 .slick-slider .slick-list {
     -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
@@ -250,7 +264,7 @@ body {
 }
 
 .slick-arrow.slick-hidden {
-    /*display: none;*/
+    display: none;
 }
 
 /*END OF PORTFOLIO*/
@@ -272,6 +286,8 @@ body {
     padding: 25px;
     height: 17em;
     margin: 5px 5px;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
 
@@ -279,10 +295,13 @@ body {
     background: #fdfdfd;
     -webkit-box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.78);
     box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.78);
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .about-item-box:hover .about-item-icon {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
     transform: scale(1.15);
     color: #CD2027;
 }
@@ -294,6 +313,8 @@ body {
 .about-item-icon {
     font-size: 40px;
     padding-bottom: 10px;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
 
@@ -304,6 +325,8 @@ body {
     padding-bottom: 5px;
     letter-spacing: 2px;
     font-size: 20px;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
 
@@ -322,6 +345,8 @@ body {
 /*CTA*/
 .cta {
     height: 40vh;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(138, 0, 0, 1)), to(rgba(201, 7, 7, 0.8))), url('../img/cta/cta.jpg') !important;
+    background-image: -o-linear-gradient(bottom, rgba(138, 0, 0, 1) 0%, rgba(201, 7, 7, 0.8) 100%), url('../img/cta/cta.jpg') !important;
     background-image: linear-gradient(0deg, rgba(138, 0, 0, 1) 0%, rgba(201, 7, 7, 0.8) 100%), url('../img/cta/cta.jpg') !important;
     background-position: center;
     background-size: cover;
@@ -332,8 +357,14 @@ body {
 
 .cta .container {
     height: 45vh;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -353,6 +384,7 @@ body {
 
 @media screen and (min-width: 1000px) {
     .process-grid {
+        display: -ms-grid;
         display: grid;
         grid-auto-flow: column;
     }
@@ -360,6 +392,7 @@ body {
 
 @media screen and (max-width: 950px) {
     .process-grid {
+        display: -ms-grid;
         display: grid;
         grid-auto-flow: row;
     }
@@ -371,6 +404,8 @@ body {
 
 .process-single-item {
     padding: 25px 15px !important;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     border-radius: 5px;
     /*border: 1px solid salmon;*/
@@ -393,6 +428,8 @@ body {
 
 .process-icon {
     font-size: 2em;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
@@ -404,6 +441,8 @@ body {
     font-weight: 600;
     color: #CD2027;
     padding: 10px;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
 
@@ -423,6 +462,8 @@ body {
 .process-single-item:hover .process-icon {
     -webkit-text-shadow: -2px 0px 10px rgba(255, 200, 200, 1);
     text-shadow: -2px 0px 10px rgba(255, 200, 200, 1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -439,6 +480,8 @@ body {
 
 /*CONTACT*/
 .contact {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 249, 0.9)), to(rgba(249, 249, 249, 0.9))), url('../img/logo/rantau media fix.png') !important;
+    background: -o-linear-gradient(rgba(249, 249, 249, 0.9), rgba(249, 249, 249, 0.9)), url('../img/logo/rantau media fix.png') !important;
     background: linear-gradient(rgba(249, 249, 249, 0.9), rgba(249, 249, 249, 0.9)), url('../img/logo/rantau media fix.png') !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -477,6 +520,30 @@ body {
     font-size: 0.8rem;
 }
 
+.form-control::-webkit-input-placeholder {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #898989;
+}
+
+.form-control::-moz-placeholder {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #898989;
+}
+
+.form-control:-ms-input-placeholder {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #898989;
+}
+
+.form-control::-ms-input-placeholder {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #898989;
+}
+
 .form-control::placeholder {
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -501,6 +568,8 @@ body {
 
 /*FOOTER*/
 footer {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(138, 0, 0, 1)), to(rgba(201, 7, 7, 0.8)));
+    background: -o-linear-gradient(bottom, rgba(138, 0, 0, 1) 0%, rgba(201, 7, 7, 0.8) 100%);
     background: linear-gradient(0deg, rgba(138, 0, 0, 1) 0%, rgba(201, 7, 7, 0.8) 100%);
     text-align: center;
     margin: 0 !important;
